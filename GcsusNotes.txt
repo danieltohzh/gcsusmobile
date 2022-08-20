@@ -1,3 +1,15 @@
 npx react-native init InflationCalc
+cd InflationCalc
+git init
+git add .
+git commit -m "Initialise Repository."
+git status
+npm install --save appcenter appcenter-analytics appcenter-crashes
 
+cd ios
+pod install --repo-update
+
+git add .
+git commit -m "Connect to AppCenter."
+git remote -v
 
