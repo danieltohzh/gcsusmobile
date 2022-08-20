@@ -1,0 +1,10 @@
+{
+  "name": "TestFixture",
+  "displayName": "TestFixture",
+  "components": [
+    {
+      "appKey": "TestFixture",
+      "displayName": "Test"
+    }
+  ]
+}

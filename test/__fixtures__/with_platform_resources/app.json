@@ -1,0 +1,28 @@
+{
+  "name": "TestFixture",
+  "displayName": "TestFixture",
+  "components": [
+    {
+      "appKey": "TestFixture",
+      "displayName": "Test"
+    }
+  ],
+  "resources": {
+    "ios": ["dist-ios/assets", "dist-ios/main.jsbundle"],
+    "macos": ["dist-macos/assets", "dist-macos/main.jsbundle"]
+  },
+  "ios": {
+    "bundleIdentifier": "bundleIdentifier-ios",
+    "codeSignEntitlements": "codeSignEntitlements-ios",
+    "codeSignIdentity": "codeSignIdentity-ios",
+    "developmentTeam": "developmentTeam-ios",
+    "reactNativePath": "reactNativePath-ios"
+  },
+  "macos": {
+    "bundleIdentifier": "bundleIdentifier-macos",
+    "codeSignEntitlements": "codeSignEntitlements-macos",
+    "codeSignIdentity": "codeSignIdentity-macos",
+    "developmentTeam": "developmentTeam-macos",
+    "reactNativePath": "reactNativePath-macos"
+  }
+}

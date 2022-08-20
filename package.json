@@ -1,32 +1,189 @@
 {
-  "name": "InflationCalc",
-  "version": "0.0.1",
-  "private": true,
+  "name": "react-native-test-app",
+  "version": "0.0.1-dev",
+  "description": "react-native-test-app provides a test app for all supported platforms as a package",
+  "keywords": [
+    "android",
+    "app",
+    "ios",
+    "macos",
+    "react",
+    "react-native",
+    "test",
+    "test-app",
+    "testing",
+    "windows"
+  ],
+  "homepage": "https://github.com/microsoft/react-native-test-app",
+  "license": "MIT",
+  "author": {
+    "name": "Microsoft Open Source",
+    "email": "microsoftopensource@users.noreply.github.com"
+  },
+  "files": [
+    "/*.{gradle,js,md,podspec,rb}",
+    "/android/**/*.gradle",
+    "/android/app/lint.xml",
+    "/android/app/src/!(test)",
+    "/android/support/src",
+    "/common",
+    "/example/.gitignore",
+    "/example/android/gradle*",
+    "/example/windows/.gitignore",
+    "/example/{metro,react-native}.config.js",
+    "/ios",
+    "/macos",
+    "/schema.json",
+    "/scripts/*.js",
+    "/windows/*.{js,props,sln}",
+    "/windows/ReactTestApp"
+  ],
+  "main": "scripts/configure.js",
+  "bin": {
+    "configure-test-app": "scripts/configure.js",
+    "init-test-app": "scripts/init.js",
+    "install-windows-test-app": "windows/test-app.js",
+    "validate-app-json": "scripts/validate-manifest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/react-native-test-app.git"
+  },
   "scripts": {
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "clean": "git clean -dfqx --exclude=.yarn/cache",
+    "format:c": "clang-format -i $(git ls-files '*.cpp' '*.h' '*.m' '*.mm')",
+    "format:js": "prettier --write $(git ls-files '*.js' '*.yml' 'test/**/*.json')",
+    "format:swift": "swiftformat --swiftversion 5.5 --ifdef no-indent ios macos",
+    "generate:code": "node scripts/generate-manifest.mjs",
+    "generate:schema": "node scripts/generate-schema.mjs",
+    "lint:commit": "git log --format='%s' origin/trunk..HEAD | tail -1 | commitlint",
+    "lint:js": "eslint $(git ls-files '*.js') && tsc",
+    "lint:kt": "ktlint --android --relative 'android/app/src/**/*.kt'",
+    "lint:rb": "bundle exec rubocop",
+    "lint:swift": "swiftlint",
+    "set-react-version": "node scripts/set-react-version.mjs",
+    "test:js": "jest",
+    "test:rb": "bundle exec ruby -Ilib:test -e \"Dir.glob('test/test_*.rb').each { |file| require_relative file }\""
   },
   "dependencies": {
-    "appcenter": "2.3.0",
-    "appcenter-analytics": "2.3.0",
-    "appcenter-crashes": "2.3.0",
-    "react": "16.8.6",
-    "react-native": "0.60.5"
+    "ajv": "^8.0.0",
+    "chalk": "^4.1.0",
+    "prompts": "^2.4.0",
+    "rimraf": "^3.0.0",
+    "semver": "^7.3.5",
+    "uuid": "^8.3.2",
+    "yargs": "^16.0.0"
+  },
+  "peerDependencies": {
+    "@react-native-community/cli": ">=4.10.0",
+    "@react-native-community/cli-platform-android": ">=4.10.0",
+    "@react-native-community/cli-platform-ios": ">=4.10.0",
+    "mustache": "^4.0.0",
+    "react": "~16.11.0 || ~16.13.1 || ~17.0.1 || ~17.0.2 || ~18.0.0",
+    "react-native": "^0.0.0-0 || 0.62 - 0.69 || 1000.0.0",
+    "react-native-macos": "^0.0.0-0 || 0.62 - 0.64 || ^0.66 || ^0.68",
+    "react-native-windows": "^0.0.0-0 || 0.62 - 0.69"
+  },
+  "peerDependenciesMeta": {
+    "@react-native-community/cli": {
+      "optional": true
+    },
+    "@react-native-community/cli-platform-android": {
+      "optional": true
+    },
+    "@react-native-community/cli-platform-ios": {
+      "optional": true
+    },
+    "mustache": {
+      "optional": true
+    },
+    "react-native-macos": {
+      "optional": true
+    },
+    "react-native-windows": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/runtime": "^7.5.5",
-    "@react-native-community/eslint-config": "^0.0.5",
-    "babel-jest": "^24.9.0",
-    "eslint": "^6.3.0",
-    "jest": "^24.9.0",
-    "metro": "^0.56.0",
-    "metro-core": "^0.56.0",
-    "metro-react-native-babel-preset": "^0.66.2",
-    "react-test-renderer": "16.8.6"
+    "@babel/core": "^7.0.0",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@microsoft/eslint-plugin-sdl": "^0.2.0",
+    "@react-native-community/cli": "^7.0.3",
+    "@react-native-community/cli-platform-android": "^7.0.1",
+    "@react-native-community/cli-platform-ios": "^7.0.1",
+    "@rnx-kit/eslint-plugin": "^0.2.0",
+    "@types/jest": "^27.0.0",
+    "@types/mustache": "^4.0.0",
+    "@types/node": "^16.0.0",
+    "@types/prompts": "~2.0.0",
+    "@types/rimraf": "^3.0.0",
+    "@types/semver": "^7.3.6",
+    "@types/uuid": "^8.3.1",
+    "eslint": "^8.0.0",
+    "eslint-plugin-jest": "^26.0.0",
+    "jest": "^27.0.0",
+    "memfs": "^3.3.0",
+    "prettier": "^2.3.1",
+    "react": "17.0.2",
+    "react-native": "^0.68.2",
+    "react-native-macos": "^0.68.3",
+    "react-native-windows": "^0.68.8",
+    "semantic-release": "^19.0.3",
+    "suggestion-bot": "^1.0.0",
+    "typescript": "^4.0.0"
+  },
+  "packageManager": "yarn@3.1.1",
+  "resolutions": {
+    "@commitlint/is-ignored/semver": "^7.3.5",
+    "@microsoft/eslint-plugin-sdl/eslint-plugin-react": "^7.26.0",
+    "@react-native-community/cli-tools/shell-quote": "^1.7.3",
+    "core-js-compat/semver": "^7.3.5",
+    "npm/chalk": "^4.1.0"
+  },
+  "workspaces": [
+    "example"
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:@microsoft/sdl/required",
+      "plugin:@rnx-kit/recommended",
+      "plugin:jest/recommended",
+      "plugin:jest/style"
+    ],
+    "rules": {
+      "@typescript-eslint/ban-ts-comment": "off"
+    }
   },
   "jest": {
-    "preset": "react-native"
+    "collectCoverage": true,
+    "roots": [
+      "test"
+    ]
+  },
+  "prettier": {
+    "endOfLine": "auto"
+  },
+  "release": {
+    "branches": [
+      "trunk"
+    ],
+    "tagFormat": "${version}",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "successComment": false
+        }
+      ]
+    ]
   }
 }

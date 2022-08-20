@@ -1,0 +1,28 @@
+plugins {
+    id("com.android.library")
+}
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+android {
+    def androidDir = "${buildscript.sourceFile.getParent()}/../"
+    apply(from: "${androidDir}/dependencies.gradle")
+    apply(from: "${androidDir}/test-app-util.gradle")
+
+    compileSdkVersion project.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode getVersionCode()
+        versionName getVersionName()
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}

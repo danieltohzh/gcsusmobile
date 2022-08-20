@@ -15,4 +15,7 @@ git remote -v
 git remote add origin https://github.com/danieltohzh/InflationCalc.git
 git push -u origin master 
 
+adb devices
+npx react-native run-android
+
 
