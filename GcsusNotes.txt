@@ -12,4 +12,7 @@ pod install --repo-update
 git add .
 git commit -m "Connect to AppCenter."
 git remote -v
+git remote add origin https://github.com/danieltohzh/InflationCalc.git
+git push -u origin master
+
 
