@@ -4,6 +4,7 @@
 
 # Xcode
 #
+build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -19,6 +20,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+project.xcworkspace
 
 # Android/IntelliJ
 #
@@ -27,13 +29,7 @@ build/
 .gradle
 local.properties
 *.iml
-.keystore
-android/private_key*
-*.aab
-
-# Visual Studio Code
-#
-.vscode/
+!debug.keystore
 
 # node.js
 #
@@ -45,7 +41,6 @@ yarn-error.log
 buck-out/
 \.buckd/
 *.keystore
-!debug.keystore
 
 # fastlane
 #
@@ -61,28 +56,7 @@ buck-out/
 # Bundle artifact
 *.jsbundle
 
-# Jest
-.jest/
-coverage/
-.coverage/
-reports/
-
-# ESLint
-.eslintcache
-
-
+jest_coverage
 
 # CocoaPods
 /ios/Pods/
-
-coverage/
-
-credentials
-
-
-._*
-
-# Builds
-.dist/
-build/
-electron/

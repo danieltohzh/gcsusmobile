@@ -1,59 +1,89 @@
-# React Native Cross-platform Apps
-Production ready starter to build cross platform app with React Native.
+# React Native Starter 🚀
 
+[View Demo](https://play.google.com/store/apps/details?id=com.gcsusmobile.upd) | [Download](https://github.com/flatlogic/react-native-starter.git) | [More templates](https://flatlogic.com/templates) | [Support forum](https://flatlogic.com/forum)
 
-## Getting started
-- `git clone git@github.com:turbothinh/react-native-cross-platform-starter.git && cd react-native-cross-platform-starter && yarn && yarn app:dep`
-- Run the app: On terminal 1, run packager with `yarn app:start`. On terminal 2, run `yarn ios` or `yarn android` for respective platform. Don't run both commands at the same time.
-- Run on web: Run `yarn web:dev`
-- Run on desktop: `yarn electron`
+*You're viewing the new and updated version of React Native Starter, previous version can be found under the [v1 branch](https://github.com/flatlogic/react-native-starter/tree/v1)*
 
-### Set you your brand
-- Change project name: Inside root folder, run `npx react-native-rename <your-new-project-name>` to rename the app
-- With your IDE, global search and replace `gcsusmobile`
-- Change project icon: Replace the `icon.png` and `logo.png` inside `public/assets` folder with your own assets. Then run `yarn generate:icon && yarn generate:bootsplash`
+A powerful react native starter template that bootstraps development of your mobile application. React Native Starter is a mobile application template with lots of built-in components like sidebar, navigation, form elements, etc - all you need to start building your mobile app faster. Check out live demo on [App Store](https://play.google.com/store/apps/details?id=com.gcsusmobile.lite), [Google Play](https://play.google.com/store/apps/details?id=com.gcsusmobile.app).
 
-### Set up deep linking
-- Follow [React-Navigation guide](https://reactnavigation.org/docs/deep-linking#set-up-with-bare-react-native-projects) to replace the existing deep-linking prefixes with your domains
+![React Native Starter](https://i.imgur.com/vcz4bU6.png)
 
-## Development
-### Debug app with Flipper
-This project comes with some Flipper integrations by default. You should install Flipper for desktop together with these plugins for development:
-- [Async storage](https://github.com/Fausto95/rn-async-storage-flipper)
-- [Reactotron](https://www.npmjs.com/package/flipper-plugin-reactotron)
-- [Redux-debugger](flipper-plugin-redux-debugger)
+<a href='https://play.google.com/store/apps/details?id=com.gcsusmobile.upd'><img width="200" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+<a href='https://play.google.com/store/apps/details?id=com.gcsusmobile.upd'><img width="200" alt='Download on App Store' src='https://i.imgur.com/7IxtMV0.png'/></a>
 
-### Debug app on web
-For development on the web, you can also install [Redux-Debugger Chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+## What's inside
 
-## Tool recommendations
-- Fastlane
-- Codepush
+- Always up-to-date React Native scaffolding
+- UI/UX Design from industry experts
+- Modular and well-documented structure for application code
+- Redux for state management
+- React Navigation for simple navigation
+- Disk-persisted application state caching
+- More than 16 Ready-to-use Pages
 
-## Features
-- Platforms
-  - [x] Run on iOS with `react-native`
-  - [x] Run on Android  with `react-native`
-  - [x] Run on web with `react-native-web`
-  - [x] Run on desktop with `electron`
-- Development
-  - [x] Testing with `Jest`'
-  - [x] Absolute import paths
-  - [x] Webpack loaders for JS, TS, fonts, files included
-  - [x] Native debuggers with Flipper: reactotron, redux-debugger, etc
-  - [x] Redux debuggger for web
-- Design
-  - [x] Design system with Dark mode
-  - [x] Icons with `eva-icons`
-  - [x] Render semantic tags like H1, H2, H3 tag on web for better SEO
-- Libraries
-  - [x] `Redux` + `Redux-Toolkit` for state management + `Persist-storage`
-  - [x] i18n with `i18next`
-  - [x] Tab navigation with `react-navigation`
-  - [x] Deep linking
+## Getting Started
 
-## Contribution
-I do accept PRs, so please feel free to create PRs. It is prefered that the commits are following [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/#summary)
+#### 1. Clone and Install
+
+```bash
+# Clone the repo
+git clone https://github.com/flatlogic/react-native-starter.git
+
+# Navigate to clonned folder and Install dependencies
+cd react-native-starter && yarn install
+
+# Install Pods
+cd ios && pod install
+```
+
+#### 2. Open RNS in your iOS simulator
+
+Run this command to start the development server and to start your app on iOS simulator:
+```
+yarn run:ios
+```
+
+Or, if you prefer Android:
+```
+yarn run:android
+```
+
+That's it! Cool, right?
+
+## Documentation
+
+Our handy documentation can be found on official RNS website: https://docs.gcsusmobile.com 
+
+## Contributing
+
+If you find any problems, please [open an issue](https://github.com/flatlogic/react-native-starter/issues/new) or submit a fix as a pull request.
+
+## Want more?
+
+We have a premium version of this mobile application template that saves you even more time and money and comes with advanced features:
+- Premium RED color scheme
+- More than 5 additional screens (such as chat, profile, product item, etc.)
+- Contains an extended charting library to visualize all the data you need
+- Premium support and updates included
+- Much, much more..
+
+Read more and purchase it at https://gcsusmobile.com
+
+## Support
+For any additional information please go to our [**support forum**](https://flatlogic.com/forum) and raise your questions or feedback provide there. We highly appreciate your participation!
+
+## How can I support developers?
+- Star our GitHub repo :star:
+- [Tweet about it](https://twitter.com/intent/tweet?text=Amazing%20Mobile%20Application%20Template%20built%20with%20React%20Native!&url=https://github.com/flatlogic/react-native-starter&via=flatlogic).
+- Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
+- Follow [@flatlogic on Twitter](https://twitter.com/flatlogic).
+- Subscribe to React Native Starter newsletter at [gcsusmobile.com](https://gcsusmobile.com/)
+- Like our page on [Facebook](https://www.facebook.com/flatlogic/) :thumbsup:
+
+## More from Flatlogic
+- [✔️Awesome Bootstrap Checkboxes & Radios](https://github.com/flatlogic/awesome-bootstrap-checkbox) - Pure css way to make inputs look prettier
+- [💥Sing App Dashboard](https://github.com/flatlogic/sing-app) - Free and open-source admin dashboard template built with Bootstrap 4 
 
 ## License
-This project is licensed under MIT License.
+
+[Mozilla Public License 2.0](LICENSE)
