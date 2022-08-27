@@ -1,0 +1,17 @@
+https://reactnative.dev/
+npx create-expo-app RNCourse
+OR
+npm install -g expo-cli
+expo init RNCourse
+
+npm start
+npm run android
+npm run ios
+npm run web
+
+yarn start
+yarn android
+yarn ios
+yarn web
+
+

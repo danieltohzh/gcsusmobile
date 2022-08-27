@@ -1,8 +1,0 @@
-tap 'homebrew/cask-versions'
-brew 'clang-format'
-brew 'ktlint'
-brew 'node'
-brew 'swiftformat'
-brew 'swiftlint'
-brew 'yarn'
-cask 'temurin11'
