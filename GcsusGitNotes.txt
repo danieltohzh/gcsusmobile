@@ -18,4 +18,6 @@ git push -u origin master
 adb devices
 npx react-native run-android
 
+npx react-native-rename gcsusmobile
+
 

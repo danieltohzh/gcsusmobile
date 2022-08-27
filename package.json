@@ -1,5 +1,5 @@
 {
-  "name": "rnStarter",
+  "name": "gcsusmobile",
   "version": "0.0.1",
   "private": false,
   "scripts": {
@@ -9,8 +9,8 @@
     "ios:device": "react-native run-ios --device $DEVICE",
     "ios:xcode": "open ./ios/*.xcworkspace",
     "ios:pod:install": "cd ios && pod install",
-    "ios:build:archive": "xcodebuild clean archive -workspace ios/rnStarter.xcworkspace -scheme rnStarter -archivePath ios/build/archive/rnStarter.xcarchive | xcpretty",
-    "ios:build:ipa": "xcodebuild -exportArchive -archivePath ios/build/archive/rnStarter.xcarchive -exportPath ios/build/export -exportOptionsPlist ios/rnStarter/ExportOptions.plist | xcpretty",
+    "ios:build:archive": "xcodebuild clean archive -workspace ios/gcsusmobile.xcworkspace -scheme gcsusmobile -archivePath ios/build/archive/gcsusmobile.xcarchive | xcpretty",
+    "ios:build:ipa": "xcodebuild -exportArchive -archivePath ios/build/archive/gcsusmobile.xcarchive -exportPath ios/build/export -exportOptionsPlist ios/gcsusmobile/ExportOptions.plist | xcpretty",
     "ios:build:ipa:list": "ls -la ios/build/export",
     "android": "react-native run-android",
     "android:device": "adb -s $DEVICE reverse tcp:8081 tcp:8081 && react-native run-android --deviceId $DEVICE",
@@ -44,7 +44,7 @@
     }
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.12.0",
+    "@react-native-community/async-storage": "2.0.0-rc.3",
     "@react-navigation/bottom-tabs": "^6.0.9",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",

@@ -10,7 +10,7 @@ Production ready starter to build cross platform app with React Native.
 
 ### Set you your brand
 - Change project name: Inside root folder, run `npx react-native-rename <your-new-project-name>` to rename the app
-- With your IDE, global search and replace `rnStarter`
+- With your IDE, global search and replace `gcsusmobile`
 - Change project icon: Replace the `icon.png` and `logo.png` inside `public/assets` folder with your own assets. Then run `yarn generate:icon && yarn generate:bootsplash`
 
 ### Set up deep linking
